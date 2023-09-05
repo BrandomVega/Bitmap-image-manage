@@ -44,25 +44,7 @@ int ImageInfo(Image* image, char* path){
 
 	return 0;
 }
-void initImage(Image* resultado, Image* original){
-    resultado->signatureFile = BMP;
-    resultado->header.AdicionalCarecteristics = original->header.AdicionalCarecteristics;
-    resultado->header.copyReserved = original->header.copyReserved;
-    resultado->header.offset = original->header.offset;
-    resultado->header.size	= original->header.size;
-    resultado->data.bpp = original->data.bpp;
-    resultado->data.channels = original->data.channels;
-    resultado->data.colorsRange = original->data.colorsRange;
-    resultado->data.compression = original->data.compression;
-    resultado->data.height = original->data.height;
-    resultado->data.ihdrSize = original->data.ihdrSize;
-    resultado->data.imgSize = original->data.imgSize;
-    resultado->data.imxtcolors = original->data.imxtcolors;
-    resultado->data.resX = original->data.resX;
-    resultado->data.resY = original->data.resY;
-    resultado->data.width = original->data.width;
 
-}
 
 
 int writeResult(Image* image){
